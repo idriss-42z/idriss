@@ -709,6 +709,61 @@ nav {
     resize: none;
 }
 
+/* --- Curseur personnalisé --- */
+body {
+    cursor: none; /* Cache le curseur par défaut */
+}
+
+.cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-primary); /* Couleur personnalisée */
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.cursor-outline {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-primary); /* Couleur personnalisée */
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9998;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+/* --- Autres styles --- */
+/* Ajoute ici tous tes autres styles comme le body, header, footer, etc. */
+
+/* Exemple de styles pour ta page */
+.bg-animation {
+    /* Animation de fond */
+    position: relative;
+    overflow: hidden;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1);
+    animation: move 10s infinite linear;
+}
+
+@keyframes move {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(100vw, 100vh); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Autres styles existants... */
+
 
 
 /*
